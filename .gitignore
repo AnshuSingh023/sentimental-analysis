@@ -1,0 +1,28 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache and build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local database files
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Large source datasets (raw MovieLens/TMDB files are already preprocessed)
+data/raw/
+data/tmdb/
+data/imdb_reviews/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini

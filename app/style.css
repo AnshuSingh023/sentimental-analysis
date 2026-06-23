@@ -1,0 +1,370 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* Base Styles */
+html, body, [class*="css"], [data-testid="stAppViewContainer"] {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #e2e8f0;
+}
+
+/* Pure Black Background with Radial Vignette */
+.stApp {
+    background: #000000;
+    background-image: radial-gradient(circle at 50% 0%, #1a0208, #000000 65%);
+    background-attachment: fixed;
+}
+
+/* Scrollbar Theme: Crimson and Pink */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff2e93;
+}
+
+/* Main Titles */
+.gradient-text {
+    background: linear-gradient(90deg, #e50914, #ff2e93, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    font-size: 3.5rem;
+    letter-spacing: -1.5px;
+    margin-bottom: 0.2rem;
+    text-shadow: 0 0 40px rgba(229, 9, 20, 0.25);
+    text-align: center;
+}
+
+.subtitle-text {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* Glassmorphism Cards for st.container(border=True) */
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: rgba(18, 18, 22, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    margin-bottom: 24px !important;
+    transition: all 0.3s ease !important;
+}
+
+div[data-testid="stVerticalBlockBorderWrapper"]:hover {
+    border-color: rgba(229, 9, 20, 0.3) !important;
+    box-shadow: 0 12px 40px 0 rgba(229, 9, 20, 0.2) !important;
+}
+
+/* Gateway centered container layout adjustment */
+div[data-key="gateway_container"] {
+    max-width: 450px !important;
+    margin: 40px auto !important;
+    padding: 30px !important;
+}
+
+/* Preset Pill container styling (inline flex wrapping) */
+div[data-key="presets_container"],
+div[data-key="presets_container"] [data-testid="stVerticalBlock"] {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    padding: 10px 0 !important;
+}
+div[data-key="presets_container"] > div,
+div[data-key="presets_container"] [data-testid="stVerticalBlock"] > div {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+}
+
+/* Specific Preset Buttons styling */
+div[data-key^="preset_"] button {
+    background: #141418 !important;
+    color: #cbd5e1 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 20px !important;
+    padding: 6px 16px !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+}
+div[data-key^="preset_"] button:hover {
+    border-color: #ff2e93 !important;
+    color: #ff2e93 !important;
+    background: rgba(255, 46, 147, 0.05) !important;
+}
+
+/* Primary buttons styling (Crimson Red-to-Pink gradient) */
+div[data-key="gateway_confirm_btn"] button,
+div[data-key="generate_recs_btn"] button {
+    background: linear-gradient(90deg, #e50914, #ff2e93) !important;
+    color: white !important;
+    border: none !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    border-radius: 10px !important;
+    padding: 10px 24px !important;
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.45) !important;
+    width: 100% !important;
+    transition: all 0.2s ease !important;
+}
+div[data-key="gateway_confirm_btn"] button:hover,
+div[data-key="generate_recs_btn"] button:hover {
+    background: linear-gradient(90deg, #b8070f, #db247b) !important;
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.65) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Surprise buttons styling (Yellow-to-Red gradient) */
+div[data-key="gateway_skip_btn"] button,
+div[data-key="surprise_recs_btn"] button {
+    background: linear-gradient(90deg, #ffd700, #e50914) !important;
+    color: white !important;
+    border: none !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    border-radius: 10px !important;
+    padding: 10px 24px !important;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.25) !important;
+    width: 100% !important;
+    transition: all 0.2s ease !important;
+}
+div[data-key="gateway_skip_btn"] button:hover,
+div[data-key="surprise_recs_btn"] button:hover {
+    background: linear-gradient(90deg, #e6c200, #c40710) !important;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.45) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Sleek Icon Action Buttons (➕, 👍, 👎) */
+div[data-key^="wl_"] button, 
+div[data-key^="like_"] button, 
+div[data-key^="dis_"] button {
+    background: #0f0f12 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 6px !important;
+    width: 100% !important;
+    padding: 6px 0 !important;
+    font-size: 1.05rem !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    transition: all 0.2s ease !important;
+}
+div[data-key^="wl_"] button:hover, 
+div[data-key^="like_"] button:hover, 
+div[data-key^="dis_"] button:hover {
+    background: rgba(255, 46, 147, 0.1) !important;
+    border-color: #ff2e93 !important;
+}
+
+/* Netflix Movie Card */
+.movie-card {
+    background: #0b0b0e;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
+    height: 100%;
+    margin-bottom: 12px;
+}
+
+.movie-card:hover {
+    transform: scale(1.03);
+    border-color: #ffd700;
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.25);
+}
+
+.movie-poster-container {
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+    background: #121214;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.movie-card:hover .movie-poster {
+    transform: scale(1.05);
+}
+
+/* Placeholder Poster styling with custom colors & "Poster Not Available" label */
+.poster-fallback {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1b1c22, #0d0d10 85%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.poster-fallback-not-available {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #ffd700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(229, 9, 20, 0.15);
+    border: 1px solid rgba(229, 9, 20, 0.3);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 8px auto;
+    width: fit-content;
+}
+
+.poster-fallback-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.poster-fallback-meta {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 600;
+}
+
+.poster-fallback-watermark {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #e50914;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.movie-info {
+    padding: 12px;
+}
+
+.movie-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+}
+
+/* Red/Pink/Yellow Badges */
+.match-badge {
+    background: linear-gradient(135deg, #e50914, #ff2e93);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.rating-badge {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background: rgba(255, 215, 0, 0.12);
+    color: #ffd700;
+    padding: 3px 6px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+    background: #050505 !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h2 {
+    color: #e50914 !important;
+}
+
+/* Metrics values in Crimson/Yellow */
+div[data-testid="stMetricValue"] {
+    color: #ffd700 !important;
+    font-weight: 800 !important;
+}
+
+/* Crisis Safety Warning Box */
+.crisis-box {
+    background: rgba(229, 9, 20, 0.05);
+    border: 2px solid #e50914;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.25);
+    margin-bottom: 24px;
+}
+
+.crisis-title {
+    color: #e50914;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+/* Badges for profile dashboard */
+.badge-dominant {
+    background: linear-gradient(135deg, #e50914, #ff2e93);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.badge-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffd700;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-block;
+}

@@ -1,0 +1,6 @@
+{
+    "model_name": "Logistic Regression",
+    "accuracy": 0.8976,
+    "vocab_size": 10000,
+    "training_time_seconds": 12.800969123840332
+}
